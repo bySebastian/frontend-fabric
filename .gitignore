@@ -1,0 +1,9 @@
+# Ignore hidden files
+/node_modules/
+/node_modules/*
+/.npm
+/.idea
+
+# logs
+/*.logs
+/npm-debug.log

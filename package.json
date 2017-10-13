@@ -1,0 +1,33 @@
+{
+    "name": "frontend-fabric",
+    "version": "0.1.0",
+    "description": "Frontend tests",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "Sebastian Vyaene <sebastian@hellopixel.be>",
+    "contributors": [
+        "Sebastian Vyaene <sebastian@hellopixel.be>"
+    ],
+    "license": "MIT",
+    "private": "true",
+    "scripts":{
+        "test": "casperjs test test.js",
+        "web-performance-metrics": "webpack --progress -p --config webpack.config.js"
+    },
+    "devDependencies": {
+        "lodash": "4.17.4",
+        "babel-core": "6.26.0",
+        "babel-loader": "7.1.2",
+        "babel-env": "2.4.1",
+        "babel-polyfill": "6.26.0",
+        "time-stamp": "2.0.0",
+        "webpack": "^1.12.14",
+        "html-webpack-plugin": "2.30.1",
+        "casperjs": "1.1.4",
+        "gpagespeed": "4.0.5",
+        "phantomas": "1.19.0",
+        "phantomas-ui": "0.0.1"
+    }
+}

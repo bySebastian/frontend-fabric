@@ -1,0 +1,6 @@
+{
+    "dist_dir": "./dist/",
+    "dev_dir": "./src/",
+    "url": "https://hellopixel.be",
+    "environment": "dev"
+}

@@ -1,3 +1,6 @@
+# Dist directory
+/dist/
+
 # Ignore hidden files
 /node_modules/
 /node_modules/*

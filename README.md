@@ -1,14 +1,19 @@
 # Frontend Fabric
+## Web Performance and Metrics Collector
 
 This test suite is developed for testing your websites during development.
 
-## Phantomas web performance metrics collector
+### Dependencies
+- Ruby
+- Yarn
 
-Start the testing server:
+Make sure your $PATH is setup. (You can run these cmds from anywhere.)
 
-`$ ./phantomas/server-start.sh`
+#### Install node dependencies
+Go into the root of your project folder and type: `yarn install`
 
-And then run the test suite:
+This will install all the development dependencies. You should now be able to run all the scripts.
 
-`$ npm test`
-
+#### Running the processes
+Open a terminal in the root of your project folder and rund:
+- `yarn web-performance-metrics`

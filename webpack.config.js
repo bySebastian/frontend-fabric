@@ -5,24 +5,25 @@ const _ = require('lodash');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const timestamp = require('time-stamp');
+const port = process.env.PORT || 3000;
 const packageJson = require('./package.json');
 const config = require('./config.json');
 
 const isDev = config.environment;
 
 module.exports = {
-    entry: config.dev_dir + 'app.js',
+    entry: config.dev_dir + 'index.js',
     output: {
         path: config.dist_dir,
         filename: 'app.js'
     },
     module: {
         loaders: [{
-            test: /\.js$/,
+            test: /\.(js|jsx)$/,
             exclude: /(bin|node_modules|bower_components|grunt|gulp|bower)/,
             loader: 'babel',
             query: {
-                presets: ['env'],
+                presets: ['env','react'],
                 babelrc: false
             }
         }]
@@ -44,7 +45,9 @@ module.exports = {
             }
         }),
         new HtmlWebpackPlugin({
-            template: config.dev_dir + 'index.html'
+            template: config.dev_dir + 'index.html',
+            filename: 'index.html',
+            inject: 'body'
         }),
         new webpack.ProvidePlugin({
             Logger   : config.dev_dir + 'libs/Logger'
